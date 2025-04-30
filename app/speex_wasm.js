@@ -53,10 +53,10 @@ var Speex = (function () {
                 thisProgram = process["argv"][1].replace(/\\/g, "/");
             }
             arguments_ = process["argv"].slice(2);
-            process["on"]("uncaughtException", function (ex) { if (!(ex instanceof ExitStatus)) {
-                throw ex;
-            } });
-            process["on"]("unhandledRejection", abort);
+            // process["on"]("uncaughtException", function (ex) { if (!(ex instanceof ExitStatus)) {
+            //     throw ex;
+            // } });
+            // process["on"]("unhandledRejection", abort);
             quit_ = function (status) { process["exit"](status); };
             Module["inspect"] = function () { return "[Emscripten Module object]"; };
         }
